@@ -1,0 +1,127 @@
+.basket {
+  display: flex;
+  flex-direction: column;
+  max-width: 505px;
+}
+
+.basket h2 {
+  margin: 0;
+  font-family: $helveticaNeue;
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.basket__account {
+  margin: 0;
+  margin-top: 15px;
+  font-family: $helveticaNeue;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  color: #000000;
+}
+
+// форма
+
+.basket__form-wrapper form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.basket__form-wrapper input {
+  width: 100%;
+  padding-top: 10px;
+  height: 44px;
+  border: none;
+  border-bottom: 1px solid $text-color;
+  box-sizing: border-box;
+
+  &::placeholder {
+    font-family: $helveticaNeue;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    color: $text-color;
+  }
+}
+
+.basket__form-wrapper label {
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  font-family: $helveticaNeue;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  color: $text-color;
+}
+
+.basket__adress-wrapper,
+.basket__email-wrapper,
+.basket__type-wrapper,
+.basket__comment-wrapper {
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.basket__name-wrapper,
+.basket__phone-wrapper {
+  position: relative;
+  width: 48%;
+}
+
+// товары
+
+.basket__product-wrapper {
+  margin-top: 70px;
+}
+
+.basket__product-wrapper h3 {
+  margin: 0;
+  font-family: $helveticaNeue;
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #000000;
+}
+
+//карточка с товаром
+
+.basket__product-list {
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+  list-style: none;
+}
+
+.basket__product-card {
+  display: flex;
+  height: 150px;
+}
+
+.basket__product-card img {
+  width: 150px;
+  height: 150px;
+}
+
+.basket__product-card:nth-child(n + 2) {
+  margin-top: 50px;
+}  
+
+.basket__card-description {
+  margin-left: 20px;
+}
+
+.basket__card-description h4 {
+  margin: 0;
+  font-family: $helveticaNeue;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 700;
+  color: #000000;
+}

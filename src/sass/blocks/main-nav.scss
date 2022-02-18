@@ -1,0 +1,106 @@
+.main-nav {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+//форма поиска
+
+.main-nav__form-wrapper {
+  display: flex;
+}
+
+.main-nav__form-wrapper button {
+  height: 29px;
+  width: 29px;
+  padding: 0;
+  margin-right: 21px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main-nav__form-wrapper input {
+  width: 250px;
+  height: 29px;
+  border: none;
+  border-bottom: 1px solid $text-color;
+  cursor: pointer;
+
+  &::placeholder {
+    font-family: $helveticaNeue;
+    font-size: 18px;
+    line-height: 21px;
+    color: $text-color;
+  }
+}
+
+//навигация пользователя 
+
+.main-nav__user-wrapper {
+  height: 29px;
+}
+
+.main-nav__user-wrapper ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 125px;
+  height: inherit;
+  list-style: none;
+}
+
+.main-nav__user-wrapper li {
+  cursor: pointer;
+}
+
+//логотип
+
+.main-nav__logo {
+  position: absolute;
+  width: 160px;
+  height: 50px;
+  margin-top: 69px;
+  left: 50%;
+  margin-left: - 80px;
+  display: block;
+  cursor: pointer;
+}
+
+.main-nav__logo img {
+  width: 160px;
+  height: 50px;
+  display: block;
+}
+
+// навигация по страницам
+
+.main-nav__list {
+  display: flex;
+  width: 100%;
+  font-family: $helveticaNeue;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  margin-top: 69px;
+  justify-content: space-between;
+  list-style: none;
+  text-transform: uppercase;
+  color: $text-color;
+}
+
+.main-nav__list a {
+  display: block;
+  cursor: pointer;
+}
+
+.main-nav__list li:nth-child(6n + 3) {
+  margin-right: 180px;
+}
