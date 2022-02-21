@@ -3,7 +3,36 @@
   <meta charset="utf-8">
   <title>Тестовое</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="shortcut icon" href="#">                                           
+  <link rel="shortcut icon" href="#">
+  <head>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=6215fd9c-5f31-4de2-8103-b367c7a38cd7&lang=ru_RU" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      ymaps.ready(init);
+      function init(){ 
+        var myMap = new ymaps.Map("map", {
+            center: [55.76, 37.64],
+            zoom: 10,
+        });
+        var myPlacemark = new ymaps.Placemark([55.8, 37.6]);
+        myMap.geoObjects.add(myPlacemark);
+        ymaps.geocode('Roma', {
+
+        results: 1
+      }).then(function (res) {
+          var firstGeoObject = res.geoObjects.get(0),
+          coords = firstGeoObject.geometry.getCoordinates(),
+          bounds = firstGeoObject.properties.get('boundedBy');
+          firstGeoObject.options.set('preset', 'islands#darkBlueDotIconWithCaption');
+          firstGeoObject.properties.set('iconCaption', firstGeoObject.getAddressLine());    
+          myMap.geoObjects.add(firstGeoObject);
+          myMap.setBounds(bounds, {
+            checkZoomRange: true
+          });
+        });
+      } 
+  </script>
+  </head>                                          
 </head> 
 <body>  
   <header class="main-header">
@@ -97,7 +126,7 @@
         <div class="basket__form-wrapper">
           <form>
             <div class="basket__adress-wrapper">
-              <input placeholder="Ваш адрес">
+              <input placeholder="Ваш адрес" type="text" id="suggest">
               <label>Адрес</label>
             </div>
             <div class="basket__name-wrapper">
@@ -171,7 +200,7 @@
         </div>
       </section>
       <section class="map">
-        <p>Map</p>
+        <div id="map" style="width: 555px; height: 700px"></div>
       </section>
     </div>
   </main>
