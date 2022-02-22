@@ -114,6 +114,9 @@
 }  
 
 .basket__card-description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-left: 20px;
 }
 
@@ -124,4 +127,67 @@
   line-height: 23px;
   font-weight: 700;
   color: #000000;
+}
+
+.basket__card-description span {
+  font-weight: 700;
+}
+
+.basket__card-description p {
+  width: 100%;
+  padding-right: 160px;
+}
+
+.basket__count-wrapper {
+  display: flex;
+  border: 1px solid #000000;
+  width: 114px;
+}
+
+.basket__count-wrapper button {
+  position: relative;
+  width: 38px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.basket__btn-minus::before {
+ position: absolute;
+ content: '';
+
+ top: 10px;
+ left: 5px;
+ width: 10px;
+ height: 1px;
+ background-color: #000000;
+}
+
+.basket__btn-plus {
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 1px;
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+.basket__count-wrapper p {
+  margin: 0;
+  padding: 0;
+  width: 38px;
+  text-align: center;
+}
+
+.basket__btn-delete {
+  text-align: center;
+  text-decoration: underline;
+  border: none;
+  background-color: transparent;
 }

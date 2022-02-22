@@ -116,13 +116,13 @@
   <main class="main-page">
     <section class="current-page">
       <p>
-        <a>Главная </a> / <a class="current-page__active">Корзина</a>
+        <a>Главная    </a> / <a class="current-page__active">Корзина</a>
       </p>
     </section>
     <div class="main-page__wrapper">
       <section class="basket">
         <h2>Корзина</h2>
-        <p class="basket__account">Есть аккаунт?<a>Войти</a></p>
+        <p class="basket__account">Есть аккаунт?<a> Войти</a></p>
         <div class="basket__form-wrapper">
           <form>
             <div class="basket__adress-wrapper">
@@ -159,11 +159,11 @@
                     <span>1090</span>
                     <p>Описание товара, которое может быть длинным</p>
                     <div class="basket__count-wrapper">
-                      <button></button>
-                      <span>1</span>
-                      <button></button>
+                      <button class="basket__btn-minus"></button>
+                      <p>1</p>
+                      <button class="basket__btn-plus"></button>
                     </div>
-                    <button></button>
+                    <button class="basket__btn-delete">Удалить</button>
                   </div>                              
                 </li>
                 <li class="basket__product-card">
@@ -173,11 +173,11 @@
                     <span>700</span>
                     <p>Описание товара, которое может быть очень-очень длинным</p>
                     <div class="basket__count-wrapper">
-                      <button></button>
-                      <span>1</span>
-                      <button></button>
+                      <button class="basket__btn-minus"></button>
+                      <p>1</p>
+                      <button class="basket__btn-plus"></button>
                     </div>
-                    <button></button>
+                    <button class="basket__btn-delete">Удалить</button>
                   </div>                              
                 </li>
                 <li class="basket__product-card">
@@ -187,11 +187,11 @@
                     <span>2000</span>
                     <p>Короткое описание товара</p>
                     <div class="basket__count-wrapper">
-                      <button></button>
-                      <span>2</span>
-                      <button></button>
+                      <button class="basket__btn-minus"></button>
+                      <p>2</p>
+                      <button class="basket__btn-plus"></button>
                     </div>
-                    <button></button>
+                    <button class="basket__btn-delete">Удалить</button>
                   </div>                              
                 </li>
               </ul>
@@ -200,7 +200,11 @@
         </div>
       </section>
       <section class="map">
-        <div id="map" style="width: 555px; height: 700px"></div>
+        <div id="map"></div>
+        <div class="map__price-wrapper">
+          <p>Итог: </p>
+          <p>3790</p>
+        </div>
       </section>
     </div>
   </main>
