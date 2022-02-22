@@ -16,7 +16,7 @@
         });
         var myPlacemark = new ymaps.Placemark([55.8, 37.6]);
         myMap.geoObjects.add(myPlacemark);
-        ymaps.geocode('Roma', {
+        ymaps.geocode('Московская область, Люберецкий район, деревня Мотяково, дом 66, корпус 12', {
 
         results: 1
       }).then(function (res) {
@@ -80,32 +80,32 @@
         </a>
         <ul class="main-nav__list">
           <li>
-            <a>
+            <a href="#">
               Страница 1
             </a>
           </li>
           <li>
-            <a>
+            <a href="#">
               Страница 2
             </a>
           </li>
           <li>
-            <a>
+            <a href="#">
               Страница 3
             </a>
           </li>
           <li>
-            <a>
+            <a href="#">
               Страница 4
             </a>
           </li>
           <li>
-            <a>
+            <a href="#">
               Страница 5
             </a>
           </li>
           <li>
-            <a>
+            <a href="#">
               Страница 6
             </a>
           </li>
@@ -116,13 +116,13 @@
   <main class="main-page">
     <section class="current-page">
       <p>
-        <a>Главная    </a> / <a class="current-page__active">Корзина</a>
+        <a href="#">Главная </a> / <a href="#" class="current-page__active">Корзина</a>
       </p>
     </section>
     <div class="main-page__wrapper">
       <section class="basket">
         <h2>Корзина</h2>
-        <p class="basket__account">Есть аккаунт?<a> Войти</a></p>
+        <p class="basket__account">Есть аккаунт?<a href="#">Войти</a></p>
         <div class="basket__form-wrapper">
           <form>
             <div class="basket__adress-wrapper">
@@ -138,12 +138,20 @@
               <label class="visually-hidden">Телефон</label>
             </div>
             <div class="basket__email-wrapper">
-              <input placeholder="Ваш Email">
+              <input placeholder="Ваш Email" type="email">
               <label class="visually-hidden">Email</label>
             </div>
-            <div class="basket__type-wrapper">
-              <input placeholder="Тип упаковки">
-              <label class="visually-hidden">Тип упаковки</label>
+            <div class="basket__type-wrapper basket__type-wrapper--opened basket__type-wrapper--closed">
+              <p>Тип упаковки</p>
+              <ul class="basket__type-options">
+                <li class="basket__option" tabindex="0">Тип упаковки 1</li>
+                <li class="basket__option" tabindex="0">Тип упаковки 2</li>
+                <li class="basket__option" tabindex="0">Тип упаковки 3</li>
+                <li class="basket__option" tabindex="0">Тип упаковки 4</li>
+                <li class="basket__option" tabindex="0">Тип упаковки 5</li>
+              </ul>
+              <!--<input placeholder="Тип упаковки">-->
+              <!--<label class="visually-hidden">Тип упаковки</label>-->
             </div>
             <div class="basket__comment-wrapper">
               <input placeholder="Введите комментарий">
@@ -196,6 +204,7 @@
                 </li>
               </ul>
             </div>
+            <button class="basket__btn-submit" type="submit">Купить</button>
           </form>
         </div>
       </section>

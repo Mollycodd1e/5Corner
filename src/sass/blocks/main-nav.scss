@@ -37,6 +37,10 @@
     line-height: 21px;
     color: $text-color;
   }
+
+  &:hover::placeholder {
+    color: #000000;
+  }
 }
 
 //навигация пользователя 
@@ -99,7 +103,13 @@
 
 .main-nav__list a {
   display: block;
+  color: $text-color;
+  text-decoration: none;
   cursor: pointer;
+
+  &:hover {
+    color: #000000;
+  }
 }
 
 .main-nav__list li:nth-child(6n + 3) {

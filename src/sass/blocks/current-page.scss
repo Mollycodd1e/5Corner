@@ -11,9 +11,18 @@
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
-  color: $text-color;
 }
 
-.current-page__active {
+.current-page a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $text-color;
+
+  &:hover {
+    color: #000000;
+  }  
+}
+
+.current-page .current-page__active {
   color: #000000;
 }
