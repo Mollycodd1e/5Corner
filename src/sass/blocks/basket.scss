@@ -41,7 +41,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 22px;
 }
 
 .basket__form-wrapper input {
@@ -78,23 +78,29 @@
   color: $text-color;
 }
 
-.basket__adress-wrapper,
+.basket__adress-wrapper {
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+}
+
 .basket__email-wrapper,
 .basket__comment-wrapper {
   position: relative;
-  margin-top: 10px;
+  margin-top: 22px;
   width: 100%;
 }
 
 .basket__name-wrapper,
 .basket__phone-wrapper {
   position: relative;
-  width: 48%;
+  margin-top: 22px;
+  width: 47%;
 }
 
 .basket__type-wrapper {
   position: relative;
-  margin-top: 10px;
+  margin-top: 22px;
   padding-top: 15px;
   height: 44px;
   width: 100%;
@@ -110,8 +116,8 @@
 
     width: 10px;
     height: 1px;
-    right: 3px;
-    top: 25px;
+    right: 4px;
+    top: 27px;
     background-color: #000000;
   }
 
@@ -175,6 +181,7 @@
   font-size: 28px;
   line-height: 32px;
   font-weight: 700;
+  letter-spacing: 0.4px;
   color: #000000;
 }
 
@@ -189,23 +196,30 @@
 
 .basket__product-card {
   display: flex;
-  height: 150px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #dedede;
+}
+
+.basket__product-card:nth-last-child(1) {
+  border-bottom: none;
 }
 
 .basket__product-card img {
+  display: block;
   width: 150px;
   height: 150px;
 }
 
 .basket__product-card:nth-child(n + 2) {
-  margin-top: 50px;
+  margin-top: 25px;
 }  
 
 .basket__card-description {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-left: 20px;
+  padding-left: 20px;
+  padding-right: 30px;
 }
 
 .basket__card-description h4 {
@@ -218,18 +232,30 @@
 }
 
 .basket__card-description span {
+  font-family: $helveticaNeue;
+  font-size: 20px;
+  line-height: 23px;
   font-weight: 700;
 }
 
 .basket__card-description p {
+  margin: 0;
+  margin-top: 10px;
+  font-family: $helveticaNeue;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
   width: 100%;
   padding-right: 160px;
+  box-sizing: border-box;
 }
 
 .basket__count-wrapper {
   display: flex;
   border: 1px solid #000000;
-  width: 114px;
+  width: 112px;
+  height: 38px;
+  margin-top: 20px;
 }
 
 .basket__count-wrapper button {
@@ -244,10 +270,10 @@
  position: absolute;
  content: '';
 
- top: 10px;
- left: 5px;
- width: 10px;
- height: 1px;
+ top: 18px;
+ left: 13px;
+ width: 18px;
+ height: 2px;
  background-color: #000000;
 }
 
@@ -256,8 +282,10 @@
   &::after {
     position: absolute;
     content: '';
-    width: 10px;
-    height: 1px;
+    width: 18px;
+    height: 2px;
+    top: 17px;
+    left: 6px;
     background-color: #000000;
   }
 
@@ -267,8 +295,11 @@
 }
 
 .basket__count-wrapper p {
+  font-size: 20px;
+  line-height: 23px;
   margin: 0;
   padding: 0;
+  padding-top: 7px;
   width: 38px;
   text-align: center;
 }
@@ -278,6 +309,8 @@
   text-decoration: underline;
   border: none;
   background-color: transparent;
+  align-self: flex-end;
+  cursor: pointer;
 }
 
 .basket__btn-submit {
@@ -287,9 +320,9 @@
   font-weight: 700;
   width: 100%;
   height: 70px;
-  margin-top: 25px;
   text-align: center;
   border: 1px solid #000000;
+  background-color: #ffffff;
   box-sizing: border-box;
   cursor: pointer;
 
