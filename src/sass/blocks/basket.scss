@@ -131,6 +131,39 @@
   }
 }
 
+.basket__type-wrapper--closed {
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+
+    width: 10px;
+    height: 1px;
+    right: 4px;
+    top: 27px;
+    background-color: #000000;
+  }
+
+  &::before {
+    right: 10px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.basket__type-wrapper--opened {
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+}
+
 .basket__type-wrapper p {
   margin: 0;
 }
@@ -305,12 +338,20 @@
 }
 
 .basket__btn-delete {
+  font-family: $helveticaNeue;
+  font-size: 14px;
+  line-height: 16px;
+  color: #9F9F9F;
   text-align: center;
   text-decoration: underline;
   border: none;
   background-color: transparent;
   align-self: flex-end;
   cursor: pointer;
+
+  &:hover {
+    color: #000000;
+  }
 }
 
 .basket__btn-submit {
