@@ -138,6 +138,10 @@
 }
 
 @media (max-width: $tablet-width-only) {
+  .main-nav__user-wrapper {
+    order: 3;
+  }
+
   .main-nav__user-wrapper ul {
     width: 90px;
   }
@@ -152,5 +156,26 @@
 
   .main-nav__form-wrapper form {
     display: none;
+  }
+
+  .main-nav__list {
+    display: none;
+  }
+
+  //логотип
+
+  .main-nav__logo {
+    position: relative;
+    order: 2;
+    width: 77px;
+    height: 24px;
+    margin-top: 0;
+    left: 0;
+    margin-left: 0;
+  }
+  
+  .main-nav__logo img {
+    width: 77px;
+    height: 24px;
   }
 }

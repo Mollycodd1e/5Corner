@@ -31,3 +31,18 @@
 .map__price-wrapper p {
   margin: 0;
 }
+
+@media (max-width: $tablet-width-only) {
+  .map {
+    display: none;
+  }
+
+  .map div:nth-child(1) {
+    width: 287px;
+    height: 200px;
+  }
+
+  .map__price-wrapper {
+    display: none;
+  }
+}

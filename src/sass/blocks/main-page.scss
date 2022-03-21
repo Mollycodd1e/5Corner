@@ -10,3 +10,14 @@
   margin-top: 50px;
   padding-bottom: 70px;
 }
+
+@media (max-width: $tablet-width-only) {
+  .main-page {
+    padding: 0 16px;
+  }
+
+  .main-page__wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+}

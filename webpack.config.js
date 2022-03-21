@@ -2,9 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+//const {CleanWebpackPlugin} = require('clean-webpack-plugin');
          
-module.exports = {                          
+module.exports = {               
   entry: {
     main: path.resolve(__dirname, './src/index.js'),
   },
@@ -36,10 +36,20 @@ module.exports = {
       ],
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new CleanWebpackPlugin(), // чистит итогувую папку перед повторной сборкой проекта
+    //new CleanWebpackPlugin(), // чистит итогувую папку перед повторной сборкой проекта
   ],
   module: {
     rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"]
+          }
+        }
+      },
       {
         test: /\.(scss|css)$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
